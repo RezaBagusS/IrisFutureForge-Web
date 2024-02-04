@@ -1,5 +1,6 @@
 import { CardTesti } from "../components/cardTesti";
 import TagSection from "../components/tagSection";
+import { motion } from "framer-motion";
 
 const dataTesti = [
   {
@@ -20,9 +21,14 @@ function Testimonial() {
   return (
     <div className="cust-container py-10 md:py-20 bg-white">
       <TagSection text={"Be The Next IRIS"} />
-      <h2 className="text-lg sm:text-xl md:text-5xl text-custDark font-bold">
+      <motion.h2
+        initial={{ opacity: 0, x: -70 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, type: "tween" }}
+        className="text-lg sm:text-xl md:text-5xl text-custDark font-bold"
+      >
         Success History with IRIS FUTURE FORGE
-      </h2>
+      </motion.h2>
       <div className="w-full flex justify-center items-center flex-col md:flex-row gap-5">
         {dataTesti.map((item, index) => {
           return <CardTesti key={index} from={item.from} desc={item.desc} />;

@@ -2,6 +2,7 @@ import { CardInfo } from "../components/cardInfo";
 import CustButton from "../components/custButton";
 import TagSection from "../components/tagSection";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const dataInfo = [
   {
@@ -27,20 +28,24 @@ const dataInfo = [
 ];
 
 function Info() {
-
   const [selectedData, setSelectedData] = useState(dataInfo);
- 
+
   useEffect(() => {
     const shuffledData = [...dataInfo].sort(() => Math.random() - 0.5);
     setSelectedData(shuffledData.slice(0, 3));
-  },[]);
+  }, []);
 
   return (
     <div className="cust-container py-10 md:py-20 bg-white">
       <TagSection text={"INFO IRIS"} />
-      <p className="text-custDark font-semibold text-base md:text-xl">
+      <motion.p
+        initial={{ opacity: 0, x: -70 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, type: "tween" }}
+        className="text-custDark font-semibold text-base md:text-xl"
+      >
         Information about activity on IRIS and the programs we offer to you.
-      </p>
+      </motion.p>
       <div className="flex flex-wrap justify-center gap-5 pb-10">
         {selectedData.map((item, index) => {
           return (

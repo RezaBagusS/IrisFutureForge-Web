@@ -3,10 +3,15 @@ import logo from "../../public/logo.png";
 import instagram from "../../public/instagram.svg";
 import tiktok from "../../public/tiktok.svg";
 import email from "../../public/email.svg";
+import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <footer className="cust-container flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-center py-10">
+    <motion.footer 
+    initial={{ opacity: 0, y: 70 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, type: "tween" }}
+    className="cust-container flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-center py-10">
       <div className="flex flex-col gap-2 items-center md:items-start justify-start">
         <div className="flex gap-2 items-center">
           <Image src={logo} alt="logo" width={40} height={40} />
@@ -26,7 +31,7 @@ function Footer() {
         <p className="text-custDark/50 text-center">Jl. Raya Bogor KM 26, Ciracas, Jakarta Timur</p>
         <p className="text-custDark/50">+62 812-3456-7890</p>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 

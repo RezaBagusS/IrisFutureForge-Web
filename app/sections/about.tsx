@@ -35,19 +35,19 @@ const data = [
 
 function About() {
   return (
-    <div className="cust-container pt-20 pb-0 flex flex-col lg:flex-row gap-8 items-center bg-white">
+    <div className="cust-container overflow-hidden pt-20 pb-0 flex flex-col lg:flex-row gap-8 items-center bg-white">
       <div className="lg:w-5/12 h-full flex flex-col justify-center gap-3">
         <TagSection text={"ABOUT IRIS"} />
         <motion.h1 
         initial={{ opacity: 0, x: -70 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, type: "tween" }}
         className="text-custDark text-3xl md:text-5xl font-bold">
           IRIS FUTURE FORGE
         </motion.h1>
         <motion.p
         initial={{ opacity: 0, x: -70 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, type: "tween" }}
         className="text-opacity-70 text-custDark text-sm md:text-base">
           IRIS Future Forge, an innovative education company, differentiates
