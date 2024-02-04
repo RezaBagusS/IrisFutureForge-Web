@@ -21,7 +21,7 @@ export function CardTesti({ from, desc }: CardInfoProps) {
         className="flex flex-col justify-between gap-5"
       >
         <Typography placeholder={""} className="text-custDark/60">
-          "{desc}"
+        &quot;{desc}&quot;
         </Typography>
         <div className="flex gap-2 items-center">
           <Image
