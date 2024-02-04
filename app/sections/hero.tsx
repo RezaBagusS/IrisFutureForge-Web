@@ -16,31 +16,34 @@ function Hero() {
         >
           Beyond Powerful
         </motion.h1>
-        <motion.h1 
-        initial={{ opacity: 0, x: -70 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, type: "tween" }}
-        className="w-7/12 font-bold text-custDark text-3xl md:text-4xl lg:text-6xl">
+        <motion.h1
+          initial={{ opacity: 0, x: -70 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, type: "tween" }}
+          className="w-7/12 font-bold text-custDark text-3xl md:text-4xl lg:text-6xl"
+        >
           With <span className="text-custPrimary">IRIS</span>
         </motion.h1>
-        <motion.div 
-        initial={{ opacity: 0, x: -70 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.9, type: "tween" }}
-        className="flex gap-5 mt-3">
+        <motion.div
+          initial={{ opacity: 0, x: -70 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, type: "tween" }}
+          className="flex gap-5 mt-3"
+        >
           <CustBotton text="Join with Us" />
           <CustBotton text="Learn More" type="onlyText" />
         </motion.div>
         <motion.div
-        initial={{ opacity: 0, x: -70 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.2, type: "tween" }}
+          initial={{ opacity: 0, x: -70 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, type: "tween" }}
         >
-            <Stats />
+          <Stats />
         </motion.div>
       </div>
       <div className="w-5/12 hidden sm:flex absolute right-0 h-screen">
         <video
+          suppressHydrationWarning={true}
           autoPlay
           muted
           loop
@@ -48,7 +51,7 @@ function Hero() {
         >
           <source
             src={
-              "https://res.cloudinary.com/dr0lbokc5/video/upload/v1707046768/videoBackground_zxm6mv.mp4"
+              "/videoBackground.mp4"
             }
             type="video/mp4"
           />

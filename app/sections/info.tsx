@@ -1,6 +1,7 @@
 import { CardInfo } from "../components/cardInfo";
 import CustButton from "../components/custButton";
 import TagSection from "../components/tagSection";
+import { useState, useEffect } from "react";
 
 const dataInfo = [
   {
@@ -26,10 +27,13 @@ const dataInfo = [
 ];
 
 function Info() {
- 
-  const shuffledData = [...dataInfo].sort(() => Math.random() - 0.5);
 
-  const selectedData = shuffledData.slice(0, 3);
+  const [selectedData, setSelectedData] = useState(dataInfo);
+ 
+  useEffect(() => {
+    const shuffledData = [...dataInfo].sort(() => Math.random() - 0.5);
+    setSelectedData(shuffledData.slice(0, 3));
+  },[]);
 
   return (
     <div className="cust-container py-10 md:py-20 bg-white">

@@ -1,6 +1,5 @@
 'use client'
 
-import { Card } from "@material-tailwind/react";
 import Navbar from "./components/navbar";
 import About from "./sections/about";
 import Hero from "./sections/hero";
