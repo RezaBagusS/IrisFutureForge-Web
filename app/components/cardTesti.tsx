@@ -6,7 +6,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Image from "next/image";
-import asahOtak from "../../public/AsahOtak.svg";
+import asahOtak from "../../public/AsahOtak.webp";
 
 interface CardInfoProps {
   desc: string;

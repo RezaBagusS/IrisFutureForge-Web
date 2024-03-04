@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import logo from "../../public/logo.svg";
+import logo from "../../public/logo.webp";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
