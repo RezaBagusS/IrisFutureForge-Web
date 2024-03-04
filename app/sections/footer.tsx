@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo.svg";
 import instagram from "../../public/instagram.svg";
 import tiktok from "../../public/tiktok.svg";
 import email from "../../public/email.svg";
